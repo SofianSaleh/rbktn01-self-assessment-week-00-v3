@@ -89,7 +89,7 @@ var livesInBerkeley = function (familyMember) {
 // };
 
 
-
+//using for loops
 var filterFamilyMembers = function (familyTree, truthTest) {
   // All your code in this function body
   var arr = []
@@ -101,12 +101,21 @@ var filterFamilyMembers = function (familyTree, truthTest) {
   	}
   }
   for(var keys in familyTree[key]) {
-  	console.log(familyTree[key][keys]['firstName'])
-  	if(x === familyTree[key][keys]){
+  	if(x === familyTree[key][keys]['location'])
   		arr.push(familyTree[key][keys]['firstName'])
   	}
-  }return arr
- }
+
+  		//console.log(familyTree[key][0]['children'])
+  	for(var i = 0; i < familyTree[key][0]['children']; i++){
+  	for (var keys in familyTreefamilyTree[key][0]['children']){
+
+  	if(x === familyTreefamilyTree[key][0]['children']['location'])
+  		arr.push(familyTreefamilyTree[key][0]['children']['firstName'])
+  		}
+  	}
+  return arr
+  }
+
 filterFamilyMembers(familyTree, livesInBerkeley)
 
 
